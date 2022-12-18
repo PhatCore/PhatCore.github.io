@@ -2,6 +2,7 @@
     positionblockEdu = $('#blockEdu').offset().top;
     positionbblockPortfolio = $('#blockPortfolio').offset().top;
     positionblockContact = $('#blockContact').offset().top;
+    positionblockComments = $('#blockComments').offset().top;
 
     $(".effectBtn,.exp").click(function () { 
         $('body,html').animate({scrollTop:positionblockEdu-80},600)
@@ -12,7 +13,11 @@
         return false;
     })  
     $(".linkCon").click(function () { 
-      $('body,html').animate({scrollTop:positionblockContact+200},600)
+      $('body,html').animate({scrollTop:positionblockContact-200},600)
+      return false;
+  }) 
+    $(".linkComment").click(function () { 
+      $('body,html').animate({scrollTop:positionblockComments+1000},600)
       return false;
   }) 
 }) 
