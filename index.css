@@ -79,13 +79,13 @@ body, html{
 .infor{
     z-index: 2;
     position: relative;
-    padding-top: 35%;
+    padding-top: 25%;
 }
 .infor img{
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .infor h2{
     font-size: 40px;
@@ -196,5 +196,4 @@ body, html{
 }
 .footer{
     color: white;
-
 }
