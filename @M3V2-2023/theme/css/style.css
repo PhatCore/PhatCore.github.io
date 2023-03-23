@@ -2630,14 +2630,14 @@ ul.dropdown-menu li {
 }
 
 .footer {
-  background: #F5F5F5;
+  background: rgb(3, 30, 87);
   text-align: center;
   padding: 80px 0;
 }
 .footer p {
   font-size: 13px;
   line-height: 25px;
-  color: #919191;
+  color: #ffffff;
 }
 .footer a {
   color: #595959;
@@ -2671,7 +2671,7 @@ ul.dropdown-menu li {
   z-index: 999;
   height: 40px;
   width: 40px;
-  background: #655E7A;
+  background: rgb(3, 30, 87);
   border-radius: 50%;
   text-align: center;
   line-height: 40px;
