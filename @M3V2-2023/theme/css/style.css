@@ -1065,8 +1065,8 @@ ul.dropdown-menu li {
   transition: all 0.3s ease;
 }
 .portfolio-work .block .portfolio-menu .btn-group label.active {
-  background-color: #655E7A;
-  border-color: #655E7A;
+  background-color: rgb(3, 30, 87);
+  border-color: rgb(3, 30, 87);
   color: #fff;
 }
 
