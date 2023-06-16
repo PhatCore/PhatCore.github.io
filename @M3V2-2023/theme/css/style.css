@@ -110,7 +110,7 @@ input[type=tel]:focus {
 }
 
 .btn-main, .btn-small, .btn-transparent {
-  background: #655E7A;
+  background: rgb(3, 30, 87);
   color: #fff;
   display: inline-block;
   font-size: 14px;
