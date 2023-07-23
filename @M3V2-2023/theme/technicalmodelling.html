@@ -85,6 +85,8 @@
 										<li><a class="dropdown-item" href="etabs.html">ETABS</a></li>
 										<li><a class="dropdown-item" href="safe.html">SAFE</a></li>
 										<li><a class="dropdown-item" href="dlubal.html">DLUBAL</a></li>
+										<br>
+                    					<li><a class="dropdown-item" href="technicalmodelling.html">Technical Modelling</a></li>
 									</ul>
 								</li>
 								</ul>
@@ -136,8 +138,8 @@
     <div class="row">
       <div class="col-md-12">
         <div class="block">
-          <h1>AUTODESK REVIT STRUCTURE</h1>
-          <p>YOUR BEST PRATICE</p>
+          <h1>Technical Modelling</h1>
+          <p>COMPLEX SHAPES - STRUCTURES - ISSUES</p>
         </div>
       </div>
     </div>
@@ -147,64 +149,68 @@
 <section class="service-about section">
 	<div class="container">
 		<div class="row align-items-center text-center text-lg-left">
-			<div class="col-lg-9">
-				<h4>PLEASE REFER TO</h4>
-				<a href="doc/revit/C&S Revit Best Practice.pdf" download>
-					C&S Revit Best Practice.pdf
-				</a> <br>
-				<a href="doc/revit/LOD Spec 2020 Part I 2020-12-31.pdf" download>
-					LOD Spec 2020 Part I 2020-12-31.pdf
-				</a> <br>
-				<a href="doc/revit/ARTSTRUC_QA DRAWINGS CHECKLIST_2023.pdf" download>
-					ARTSTRUC_QA DRAWINGS CHECKLIST_2023.pdf
-				</a> <br>
-				<a href="doc/revit/ARTSTRUC_REVIT TEMPLATE_R2021.rvt" download>
-					ARTSTRUC_REVIT TEMPLATE_R2021.rvt
-				</a> <br>
-				<a href="https://help.autodesk.com/view/RVT/2023/ENU/?guid=GUID-9E9688A2-0645-4F8E-9D96-F1B76291A6C6" >
-					Autodesk Revit Tutorial
-				</a> <br>
+			<div class="col-lg-12">
+				<h4>CURVED 3D STRUSS</h4>
+				<p>1/ Initialize the model from the grid only to draw a basic pyramid. <br>
+					Assumed this pyramid represents a crystal with regular bars 2m long, the pyramidal height is 2^(1/2) ~ 1.4142m. <br>
+					Create a pyramid shape by drawing the first 2 bars and then the radial rotation of these two bars. 
+					
+				</p>
 			</div>
-			<div class="col-lg-3">
-				<img class="img-fluid" src="images/material/REVIT.jpg">
+			<div class="col-lg-4">
+				<img class="img-fluid" src="images/technical modelling/Curved 3d space_1.png">
+			</div>
+			<div class="col-lg-4">
+				<img class="img-fluid" src="images/technical modelling/Curved 3d space_2.png">
+			</div>
+			<div class="col-lg-4">
+				<img class="img-fluid" src="images/technical modelling/Curved 3d space_3.png">
+			</div>
+			<div class="col-lg-12">
+				<p>2/ Select 2 bars. Edit -> Replicate -> Radial parameters: Rotate about line Parallel to Z: 
+					X=1, Y=1; Number =3; Angle =90
+				</p>
+			</div>
+			<div class="col-lg-12">
+				<img class="img-fluid" src="images/technical modelling/Curved 3d space_4.png">
+			</div>
+			<div class="col-lg-12">
+				<p>3/ Select the basic pyramid, clone the radial to create 8 more pyramids towards the left. 
+					Then the lower wing bar connects the basal pyramid to the pyramid next to it and then clones the 7 bars.
+				</p>
+			</div>
+			<div class="col-lg-4">
+				<img class="img-fluid" src="images/technical modelling/Curved 3d space_5.png">
+			</div>
+			<div class="col-lg-4">
+				<img class="img-fluid" src="images/technical modelling/Curved 3d space_6.png">
+			</div>
+			<div class="col-lg-4">
+				<img class="img-fluid" src="images/technical modelling/Curved 3d space_7.png">
+			</div>
+			<div class="col-lg-12">
+				<p>4/ Again to select the basic pyramid, clone the radial to create 8 more pyramids towards the right. 
+					Then the lower wing bar connects the basal pyramid to the pyramid next to it and then clones the 7 bars.
+					<br> Replicate Linear Y to create curved 3D struss.
+				</p>
+			</div>
+			<div class="col-lg-4">
+				<img class="img-fluid" src="images/technical modelling/Curved 3d space_8.png">
+			</div>
+			<div class="col-lg-8">
+				<img class="img-fluid" src="images/technical modelling/Curved 3d space_9.png">
+			</div>
+			<div class="col-lg-12">
+				<p>5/ Select all -> Edit -> Merge Joint -> OK
+				</p>
+			</div>
+			<div class="col-lg-12">
+				<img class="img-fluid" src="images/technical modelling/Curved 3d space_10.png">
 			</div>
 		</div>
 	</div>
 </section>
 
-<section class="service-list section bg-gray">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="section-title text-center">
-					<h2>SOME NOTES & RULES</h2>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-lg-12 col-sm-12">
-				<div class="block">
-					<h3 class="mb-12">1 - Modelling 3D workflow </h3>
-					<p> * Modelling is needed to confirm whether to use revit model to transfer other analysis software? Based on the complex level of building such as 
-						curved, diagal, and continuous curvilinear structure, it is necessary to carefully and thoroughly model the analytical link in revit. <br>
-						* Confirm to deploy 2D or 3D rebar (depend on clients) <br>
-						* Always update the customer's architectural model with the structural model to update and handle 
-						the model as well as it is important to change the structural methods according to the architecture if necessary
-					</p> <br>
-						<h3 class="mb-12">2 - Deploy drawings workflow</h3>
-					<p> * Title Block Template (A3/A0...) <br>	
-						* View Template (To be applied to drag on sheets) => need to confirm manager<br>
-						* Crop view (often) or Scope of box (to be used to divide smaller plan)	<br>
-						* Structure Plan and Title Plan Family-according to client's commnents <br>
-						* Alive section or Dummy section <br>
-						* Details/ Call out (Connections 2D or 3D) <br>
-						* Line Style, Text Style, Work Line <br>
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
 
 <!-- footer Start -->
 <footer class="footer">
