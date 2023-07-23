@@ -85,8 +85,6 @@
 										<li><a class="dropdown-item" href="etabs.html">ETABS</a></li>
 										<li><a class="dropdown-item" href="safe.html">SAFE</a></li>
 										<li><a class="dropdown-item" href="dlubal.html">DLUBAL</a></li>
-										<br>
-                    					<li><a class="dropdown-item" href="technicalmodelling.html">Technical Modelling</a></li>
 									</ul>
 								</li>
 								</ul>
@@ -138,7 +136,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="block">
-          <h1>AUTODESK ROBOT STRUCTURE</h1>
+          <h1>AUTODESK REVIT STRUCTURE</h1>
           <p>YOUR BEST PRATICE</p>
         </div>
       </div>
@@ -151,21 +149,24 @@
 		<div class="row align-items-center text-center text-lg-left">
 			<div class="col-lg-9">
 				<h4>PLEASE REFER TO</h4>
-				<a href="doc/robot/Giáo trình Robot Structural tập 1_Nguyễn Hoàng Anh.pdf" download>
-					Giáo trình Robot Structural tập 1_Nguyễn Hoàng Anh.pdf
+				<a href="doc/revit/C&S Revit Best Practice.pdf" download>
+					C&S Revit Best Practice.pdf
 				</a> <br>
-				<a href="doc/robot/Giáo trình Robot Structural Tập 2_Nguyễn Hoàng Anh.pdf" download>
-					Giáo trình Robot Structural tập 2_Nguyễn Hoàng Anh.pdf
+				<a href="doc/revit/LOD Spec 2020 Part I 2020-12-31.pdf" download>
+					LOD Spec 2020 Part I 2020-12-31.pdf
 				</a> <br>
-				<a href="doc/robot/pdfcoffee.com_autodesk-robot-structural-analysis-training-manualpdf-pdf-free.pdf" download>
-					autodesk-robot-structural-analysis-training-manual.pdf
+				<a href="doc/revit/ARTSTRUC_QA DRAWINGS CHECKLIST_2023.pdf" download>
+					ARTSTRUC_QA DRAWINGS CHECKLIST_2023.pdf
 				</a> <br>
-				<a href="https://help.autodesk.com/view/RSAPRO/2023/ENU/?guid=Robot_GSG_Tutorials_html" >
-					Autodesk Robot Structure Tutorial
+				<a href="doc/revit/ARTSTRUC_REVIT TEMPLATE_R2021.rvt" download>
+					ARTSTRUC_REVIT TEMPLATE_R2021.rvt
+				</a> <br>
+				<a href="https://help.autodesk.com/view/RVT/2023/ENU/?guid=GUID-9E9688A2-0645-4F8E-9D96-F1B76291A6C6" >
+					Autodesk Revit Tutorial
 				</a> <br>
 			</div>
 			<div class="col-lg-3">
-				<img class="img-fluid" src="images/material/ROBOT.jpg">
+				<img class="img-fluid" src="images/material/REVIT.jpg">
 			</div>
 		</div>
 	</div>
@@ -183,18 +184,21 @@
 		<div class="row">
 			<div class="col-lg-12 col-sm-12">
 				<div class="block">
-					<h3 class="mb-12">Modelling analysis workflow</h3>
-					<p> * !!! Modelling model carefully because robot structure's snap object is POOR <br>
-						* Set up Units & Design Code <br>
-						* Define Material if necessary  <br>
-						* Define section <br>
-						* Define code parameter<br>
-						* Check dispalcement => nodal<br>
-						* Check frequency => structure stiffness<br>
-						* Check release or rigid link => missed or exceeded => instability<br>
-						* Check internal force => values are compared to hand calculation to confirm OK or NON<br>
-						* Check panel => check panel calculation mode<br>
-					</p> 
+					<h3 class="mb-12">1 - Modelling 3D workflow </h3>
+					<p> * Modelling is needed to confirm whether to use revit model to transfer other analysis software? Based on the complex level of building such as 
+						curved, diagal, and continuous curvilinear structure, it is necessary to carefully and thoroughly model the analytical link in revit. <br>
+						* Confirm to deploy 2D or 3D rebar (depend on clients) <br>
+						* Always update the customer's architectural model with the structural model to update and handle 
+						the model as well as it is important to change the structural methods according to the architecture if necessary
+					</p> <br>
+						<h3 class="mb-12">2 - Deploy drawings workflow</h3>
+					<p> * Title Block Template (A3/A0...) <br>	
+						* View Template (To be applied to drag on sheets) => need to confirm manager<br>
+						* Crop view (often) or Scope of box (to be used to divide smaller plan)	<br>
+						* Structure Plan and Title Plan Family-according to client's commnents <br>
+						* Alive section or Dummy section <br>
+						* Details/ Call out (Connections 2D or 3D) <br>
+						* Line Style, Text Style, Work Line <br>
 					</p>
 				</div>
 			</div>
