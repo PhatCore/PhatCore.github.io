@@ -150,7 +150,7 @@
 	<div class="container">
 		<div class="row align-items-center text-center text-lg-left">
 			<div class="col-lg-12">
-				<h4>CURVED 3D STRUSS</h4>
+				<h4>TOPIC 1 - CURVED 3D STRUSS</h4>
 				<p>1/ Initialize the model from the grid only to draw a basic pyramid. <br>
 					Assumed this pyramid represents a crystal with regular bars 2m long, the pyramidal height is 2^(1/2) ~ 1.4142m. <br>
 					Create a pyramid shape by drawing the first 2 bars and then the radial rotation of these two bars. 
@@ -208,6 +208,111 @@
 				<img class="img-fluid" src="images/technical modelling/Curved 3d space_10.png">
 			</div>
 		</div>
+	</div>
+</section>
+
+<section class="service-about section">
+	<div class="container">
+		<div class="row align-items-center text-center text-lg-left">
+			<div class="col-lg-12">
+				<h4>TOPIC 2 - SHELL MESH</h4>
+				<p> Analysis of 5x5m, 10cm thickness simply supported rectangular plates.<br> 
+					Modulus of Elasticity E = 2.65x10^6 T/m2 and Poisson U = 0.2 <br>
+					Consider 2 cases: <br>
+					<ul>
+						<li>
+							Distributed load q = 1 T/m2
+						</li>
+						<li>
+							Concentrated load q = 5 T
+						</li>
+					</ul>
+				</p>
+				<br>
+				<p>
+					Divided plates with coarse, medium and fine mode to compare their results with CSI-SAP2000/ Etabs/ others. Hence, we can view the general analysis to apply for actual design
+				</p>
+			</div>
+
+			<div class="col-lg-4">
+				<p>A. Set up Units. Check file menu -> New model -> Grid only</p>
+				<img class="img-fluid" src="images/technical modelling/topic 2_2.png">
+			</div>
+			<div class="col-lg-4">
+				<img class="img-fluid" src="images/technical modelling/topic 2_1.png">
+			</div>
+			<div class="col-lg-4">
+				<p>B. Define material</p>
+				<img class="img-fluid" src="images/technical modelling/topic 2_3.png">
+			</div>
+			<div class="col-lg-12">
+				<p>C. Define -> Area Sections</p>
+			</div>
+			<div class="col-lg-12">
+				<img class="img-fluid" src="images/technical modelling/topic 2_4.png">
+			</div>
+			<div class="col-lg-12">
+				<p>D. Quick Draw Slab
+				</p>
+				<img class="img-fluid" src="images/technical modelling/topic 2_5.png">
+			</div>
+			<div class="col-lg-12">
+				<p>E. Select all -> Ctrl R/ Edit -> Replicate to create 4 slabs.
+				</p>
+				<img class="img-fluid" src="images/technical modelling/topic 2_6.png">
+			</div>
+			<div class="col-lg-12">
+				<p>F. Divide 5 slabs 2x2, 4x4, 6x6, 10x10, 20x20 respectively <br>
+					Select area -> Edit -> Divide Areas
+				</p>
+				<img class="img-fluid" src="images/technical modelling/topic 2_7.png">
+			</div>
+			<div class="col-lg-12">
+				<p>G. Select all nodes -> Assign -> Joint -> Restraints 
+				</p>
+				<img class="img-fluid" src="images/technical modelling/topic 2_8.png">
+			</div>
+			<div class="col-lg-12">
+				<p>Define Load Patterns & Analysis Case - needless to calculate self-weight
+				</p>
+				<img class="img-fluid" src="images/technical modelling/topic 2_9.png">
+				<img class="img-fluid" src="images/technical modelling/topic 2_10.png">
+			</div>
+			<div class="col-lg-12">
+				<p>Assign -> Area Load -> Uniform <br>
+					Assign -> Joint Load -> Force
+				</p>
+				<img class="img-fluid" src="images/technical modelling/topic 2_11.png">
+				<img class="img-fluid" src="images/technical modelling/topic 2_12.png">
+			</div>
+			<div class="col-lg-12">
+				<p>Analyze -> Set Analysis Options -> XY Plane -> F5 to Run Analysis<br>
+				</p>
+				<img class="img-fluid" src="images/technical modelling/topic 2_13.png">
+			</div>
+			<div class="col-lg-12">
+				<p>Results Moment - Deformation - Distributed Case<br>
+				</p>
+				<img class="img-fluid" src="images/technical modelling/topic 2_14.png">
+				<p>Results Moment - Deformation - Concentrated Case<br>
+				</p>
+				<img class="img-fluid" src="images/technical modelling/topic 2_15.png">
+			</div>
+		</div>
+
+		<p>
+			According to Theory of Plate & Shell - S.Timoshenko & S. Woinowsky-Krieger 
+			(Chapter 5-section 30-formula -141) - Alternate Solution for Simply Supported and Uniformly Loaded Rectangular Plates <br>
+			(Chapter 5-section 34-formula -147) - Alternate Solution for Simply Supported and Uniformly Loaded Rectangular Plates
+			The stiffness of plate (Chapter 1 - formula - 3) <br>
+			<a href="doc/textbook/vdocuments.net_timoshenko-plates-and-shells.pdf" download>
+				Click to download => Theory of Plates and Shells
+			</a> <br>
+			<img class="img-fluid" src="images/technical modelling/topic 2_16.png">
+				<b>Notes: In this topic: dividing the floor into smaller elements. It is also possible to divide the virtual cell during the analysis phase, in the model it is still a plate object
+					That is an extended issues - will be updated soon.
+				</b>
+		</p>
 	</div>
 </section>
 
